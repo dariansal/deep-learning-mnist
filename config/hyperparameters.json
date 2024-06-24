@@ -1,0 +1,9 @@
+{
+    "learning_rate": 0.008,
+    "batch_size": 128,
+    "epochs": 20,
+    "dropout_rate": 0,
+    "hidden_one": 512,
+    "hidden_two": 128,
+    "n_slope": 0.01
+  }
