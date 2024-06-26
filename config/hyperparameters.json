@@ -5,5 +5,7 @@
     "dropout_rate": 0,
     "hidden_one": 512,
     "hidden_two": 128,
-    "n_slope": 0.01
+    "n_slope": 0.01,
+    "augment": true,
+    "prob_augment": 0.2
   }
