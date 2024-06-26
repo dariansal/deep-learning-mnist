@@ -7,5 +7,5 @@
     "hidden_two": 128,
     "n_slope": 0.01,
     "augment": true,
-    "prob_augment": 0.2
+    "prob_augment": 0.3
   }
