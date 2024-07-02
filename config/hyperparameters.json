@@ -9,5 +9,13 @@
     "augment": true,
     "prob_augment": 0.3,
     "beta_one": 0.9,
-    "beta_two": 0.999
+    "beta_two": 0.999,
+    "degrees": 10,
+    "trans_horz": 0.03,
+    "trans_vert": 0.02,
+    "scale_min": 0.90,
+    "scale_max": 1.01,
+    "shear": 10,
+    "brightness": 0.22,
+    "contrast": 0.25
   }
