@@ -1,6 +1,6 @@
 {
     "learning_rate": 0.01,
     "b_size": 128,
-    "epochs": 125,
+    "epochs": 150,
     "hidden": 1024
   }
