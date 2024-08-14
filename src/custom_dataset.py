@@ -1,11 +1,10 @@
-'''Get data -> split into subsets -> wrap them in DataSetT class and give them transformation attribute, 
+'''For approach 2, Get data -> split into subsets -> wrap them in DataSetT class and give them transformation attribute, 
 define methods necessary for DataLoader-> merge them back together'''
-import numpy as np
 
 class DataSetT:
     def __init__(self, images, labels, transform):
-        self.images = np.array(images) 
-        self.labels = np.array(labels)  
+        self.images = images
+        self.labels = labels
         self.transform = transform
 
     def __len__(self): #subset has length
