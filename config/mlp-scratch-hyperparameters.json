@@ -1,7 +1,6 @@
 {
     "learning_rate": 0.01,
-    "batch_size": 512,
-    "n_slope": 0.01,
-    "epochs": 80,
+    "b_size": 128,
+    "epochs": 125,
     "hidden": 1024
   }
