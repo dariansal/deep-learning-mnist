@@ -129,21 +129,16 @@ _Note: For final training, concatenate all normalized training examples from MNI
 
 - After choosing the hyperparameters and training the model with the full train dataset, the confusion matrix was analyzed with statistics including F1 score, precision, accuracy, and recall
 
-<br>
-
 <figure>
   <img src="visuals/original-distribution.png" alt="Original Distribution of Classes" width="75" height="200">
   <figcaption>Figure 4: Original Augmented Dataset Distribution</figcaption>
 </figure>
 
-<br>
 
 <figure>
   <img src="visuals/altered-distribution.png" alt="Altered Distribution of Classes" width="75" height="200">
   <figcaption>Figure 5: Altered Augmented Dataset Distribution</figcaption>
-</figure>
-
-<br>
+</figure>  
 
 - The distribution of classes in MNIST dataset is originally uneven and the classes with more samples (e.g., 1) had a higher recall
 - To improve performance, in the augmented dataset, numbers that had a higher recall were replaced with numbers that had a lower recall 
@@ -170,8 +165,6 @@ _Note: For final training, concatenate all normalized training examples from MNI
   <img src="../data/test-images/9-4.png" alt="Handwritten digit" width="200" height="200">
   <figcaption>Figure 6: Custom handwritten digit</figcaption>
 </figure>
-
-<br>
 
 - The MLP correctly classified the digit as '9' with 72.21% confidence
 - The CNN correctly classified the digit as '9' with 99.86% confidence
