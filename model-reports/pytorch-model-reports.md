@@ -170,7 +170,7 @@ _Note: For final training, concatenate all normalized training examples from MNI
 </figure>
 <br>
 
-For a sample handwritten digit ''9'
+For a sample handwritten digit '9'
 - The MLP correctly classified the digit with 72.21% confidence
 - The CNN correctly classified the digit with 99.86% confidence
     - This could be because the CNN, which has pattern recognition capabilities from its convolution layers, can handle out-of-distribution characteristics (e.g., pixel brightness, digit thickness) better than an MLP
