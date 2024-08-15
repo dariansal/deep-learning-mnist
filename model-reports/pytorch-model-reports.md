@@ -130,6 +130,7 @@ _Note: For final training, concatenate all normalized training examples from MNI
 
 - After choosing the hyperparameters and training the model with the full train dataset, the confusion matrix was analyzed with statistics including F1 score, precision, accuracy, and recall
 
+<br>
 <figure>
   <img src="visuals/original-distribution.png" alt="Original Distribution of Classes" width="75" height="200">
   <figcaption>Figure 4: Original Augmented Dataset Distribution</figcaption>
@@ -167,6 +168,7 @@ _Note: For final training, concatenate all normalized training examples from MNI
   <img src="../data/test-images/9-4.png" alt="Handwritten digit" width="200" height="200">
   <figcaption>Figure 6: Custom handwritten digit</figcaption>
 </figure>
+<br>
 
 For a sample handwritten digit ''9'
 - The MLP correctly classified the digit with 72.21% confidence
