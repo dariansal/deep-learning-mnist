@@ -77,8 +77,8 @@ Viewable in the `config/` directory.
 
 <br>
 <figure>
-  <img src="visuals/approach1.png" alt="Approach 1" width="600" height="400">
-  <figcaption>Figure 1: Visualization of Approach 1.</figcaption>
+  <img src="visuals/approach1.png" alt="Approach 1" width="550" height="400">
+  <figcaption>Figure 1: Visualization of Approach 1</figcaption>
 </figure>
 
 #### Approach 1
@@ -94,8 +94,8 @@ _Note: For final training with full train data, skip the first two steps and eva
 
 <br>
 <figure>
-  <img src="visuals/approach2.png" alt="Approach 2" width="600" height="400">
-  <figcaption>Figure 2: Visualization of Approach 2.</figcaption>
+  <img src="visuals/approach2.png" alt="Approach 2" width="550" height="400">
+  <figcaption>Figure 2: Visualization of Approach 2</figcaption>
 </figure>
 
 #### Approach 2
@@ -109,23 +109,7 @@ _Note: For final training with full train data, skip the first two steps and eva
     - Train and evaluate model on validation subset
 _Note: For final training, concatenate all normalized training examples from MNIST dataset with augmented dataset; evaluate model on test dataset instead_
 
-<br>
-<div style="display: flex; justify-content: center; gap: 20px;">
-  <figure style="text-align: center;">
-    <img src="visuals/original-distribution.png" alt="Distribution of Classes" width="75" height="200">
-    <figcaption>Figure 3: Original Distribution of Classes in Augmented Dataset.</figcaption>
-  </figure>
-  <figure style="text-align: center;">
-    <img src="visuals/altered-distribution.png" alt="Distribution of Classes" width="75" height="200">
-    <figcaption>Figure 4: Altered Distribution of Classes in Augmented Dataset.</figcaption>
-  </figure>
-</div>
-
-### Additional Considerations
-- The distribution of classes in MNIST dataset is uneven; the classes with more samples (e.g., 1) had a higher recall
-- Therefore, in Approach 2, the classes in the augmented dataset were redistributed before the concatenation to contain more of the classes that the model did not correctly identify to account for this
 - Approach 2 resulted in a higher validation accuracy than Approach 1, so it was used for the final model training
-
 
 ## Training Process
 - Once the optimal hyperparameters were chosen, the full train dataset was used to train the model using Approach 2 (as described above). 
@@ -139,17 +123,18 @@ _Note: For final training, concatenate all normalized training examples from MNI
 
 <figure>
   <img src="visuals/mlp-confusion.png" alt="Approach 2" width="450" height="400">
-  <figcaption>Figure 5: MLP Confusion Matrix.</figcaption>
+  <figcaption>Figure 3: MLP Confusion Matrix</figcaption>
 </figure>
 
 
 - After final model training, the confusion matrix was analyzed with statistics including F1 score, precision, accuracy, and recall.
 
+<br>
 <figure>
   <img src="visuals/original-distribution.png" alt="Original Distribution of Classes" width="75" height="200">
   <figcaption>Figure 4: Original Augmented Dataset Distribution</figcaption>
 </figure>
-
+<br>
 
 <figure>
   <img src="visuals/altered-distribution.png" alt="Altered Distribution of Classes" width="75" height="200">
@@ -161,7 +146,6 @@ _Note: For final training, concatenate all normalized training examples from MNI
   - This strategy increased the chance of chosen augmented elements being from a class that the model previously identified poorly  
 - Individually applied this strategy to each model (e.g., MLP augmented dataset was populated with more '7' samples than CNN augmented dataset)  
 - After retraining with this strategy, both the CNN and MLP generalization improved  
-
 
 ## Results and Discussion
 
@@ -183,9 +167,10 @@ _Note: For final training, concatenate all normalized training examples from MNI
   <figcaption>Figure 6: Custom handwritten digit</figcaption>
 </figure>
 
-- The MLP correctly classified the digit as '9' with 72.21% confidence  
-- The CNN correctly classified the digit as '9' with 99.86% confidence  
-- Could be because the CNN, which has pattern recognition capabilities from its convolution layers, can handle out-of-distribution characteristics (e.g., pixel brightness, digit thickness) better than an MLP
+- For the custom handwritten digit '9':
+  - The MLP correctly classified the digit with 72.21% confidence
+  - The CNN correctly classified the digit with 99.86% confidence
+  - This could be because the CNN, which has pattern recognition capabilities from its convolution layers, can handle out-of-distribution characteristics (e.g., pixel brightness, digit thickness) better than an MLP
 
 ### Key Takeaways
 

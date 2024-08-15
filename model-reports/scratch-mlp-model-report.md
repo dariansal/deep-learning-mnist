@@ -58,17 +58,11 @@ This document outlines the process and results for the multilayer perceptron (ML
 ## Training Process
 
 <figure>
-<<<<<<< HEAD
   <img src="visuals/train-visual.png" alt="Train visual" width="800" height="250">
-  <figcaption>Figure 1: Training the model with train/validations subsets.</figcaption>
-</figure>
-
- - During grid search, analyzed Figure 1 with different sets of hyperparameters to visualize how loss and train/validation accuracy were affected
-=======
-  <img src="visuals/train-visual.png" alt="Train visual" width="700" height="250">
   <figcaption>Figure 1: Training the model with train/validations subsets</figcaption>
 </figure>
->>>>>>> c2bdaf8 (Add usage rights.)
+
+- During grid search, analyzed Figure 1 with different sets of hyperparameters to visualize how loss and train/validation accuracy were affected
 
 - While repeatedly being created during the training process, Figure 1 used to interpret how loss and train/validation accuracy were affected by different sets of hyperparameters.
 
@@ -96,13 +90,8 @@ This document outlines the process and results for the multilayer perceptron (ML
   <figcaption>Figure 2: Custom handwritten digit</figcaption>
 </figure>
 
-<<<<<<< HEAD
-- The model correctly classified this example as '8' with 79.76% confidence
-- Overall performance on custom digits was lower than the test set accuracy
-=======
 - The model correctly classified the digit as '8' with 79.76% confidence  
-- Overall performance on custom digits was lower than the test set accuracy  
->>>>>>> c2bdaf8 (Add usage rights.)
+- Overall performance on custom digits was lower than the test set accuracy
 - Suspect this reduced performance was due to out-of-distribution characteristics (e.g., pixel brightness, digit thickness) compared to MNIST dataset
 
 ### Key Takeaways
