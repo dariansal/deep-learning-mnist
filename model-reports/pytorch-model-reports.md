@@ -130,17 +130,17 @@ _Note: For final training, concatenate all normalized training examples from MNI
 
 - After choosing the hyperparameters and training the model with the full train dataset, the confusion matrix was analyzed with statistics including F1 score, precision, accuracy, and recall
 
+<figure>
+  <img src="visuals/original-distribution.png" alt="Original Distribution of Classes" width="75" height="200">
+  <figcaption>Figure 4: Original Augmented Dataset Distribution</figcaption>
+</figure>
 <br>
-<div style="display: flex; justify-content: center; gap: 20px;">
-  <figure style="text-align: center;">
-    <img src="visuals/original-distribution.png" alt="Distribution of Classes" width="75" height="200">
-    <figcaption>Figure 4: Original Augmented Dataset Distribution</figcaption>
-  </figure>
-  <figure style="text-align: center;">
-    <img src="visuals/altered-distribution.png" alt="Distribution of Classes" width="75" height="200">
-    <figcaption>Figure 5: Altered Augmented Dataset Distribution</figcaption>
-  </figure>
-</div>
+
+<figure>
+  <img src="visuals/altered-distribution.png" alt="Altered Distribution of Classes" width="75" height="200">
+  <figcaption>Figure 5: Altered Augmented Dataset Distribution</figcaption>
+</figure>
+<br>
 
 - The distribution of classes in MNIST dataset is originally uneven and the classes with more samples (e.g., 1) had a higher recall
 - To improve performance, in the augmented dataset, numbers that had a higher recall were replaced with numbers that had a lower recall 
