@@ -59,7 +59,6 @@ This document outlines the process and results for the Convolutional Neural Netw
 
 Viewable in the `config/` directory.
 
-
 ### Design Choices
 
 - **Hyperparameter Tuning**: Used grid search for hyperparameter tuning, with each hyperparameter combination evaluated using 10-fold cross-validation. For each set of hyperparameters, the mean validation accuracy across all folds was used as the evaluation statistic. 
@@ -131,16 +130,19 @@ _Note: For final training, concatenate all normalized training examples from MNI
 - After choosing the hyperparameters and training the model with the full train dataset, the confusion matrix was analyzed with statistics including F1 score, precision, accuracy, and recall
 
 <br>
+
 <figure>
   <img src="visuals/original-distribution.png" alt="Original Distribution of Classes" width="75" height="200">
   <figcaption>Figure 4: Original Augmented Dataset Distribution</figcaption>
 </figure>
+
 <br>
 
 <figure>
   <img src="visuals/altered-distribution.png" alt="Altered Distribution of Classes" width="75" height="200">
   <figcaption>Figure 5: Altered Augmented Dataset Distribution</figcaption>
 </figure>
+
 <br>
 
 - The distribution of classes in MNIST dataset is originally uneven and the classes with more samples (e.g., 1) had a higher recall
@@ -168,11 +170,11 @@ _Note: For final training, concatenate all normalized training examples from MNI
   <img src="../data/test-images/9-4.png" alt="Handwritten digit" width="200" height="200">
   <figcaption>Figure 6: Custom handwritten digit</figcaption>
 </figure>
+
 <br>
 
-For a sample handwritten digit '9'
-- The MLP correctly classified the digit with 72.21% confidence
-- The CNN correctly classified the digit with 99.86% confidence
+- The MLP correctly classified the digit as '9' with 72.21% confidence
+- The CNN correctly classified the digit as '9' with 99.86% confidence
     - This could be because the CNN, which has pattern recognition capabilities from its convolution layers, can handle out-of-distribution characteristics (e.g., pixel brightness, digit thickness) better than an MLP
 
 ### Key Takeaways
@@ -182,7 +184,7 @@ For a sample handwritten digit '9'
     - Both models demonstrate high accuracy on the MNIST test dataset
 
 2. Generalization to Out-of-Distribution Data:
-    - The MLP struggles significantly more than the CNN when dealing with the out-of-distribution `test-images` data (handwritten digits I drew)
+    - The MLP struggles significantly more than the CNN when dealing with the out-of-distribution `test-images` data
     - Suggests that the CNN has better generalization capabilities for real world data
 
 3. Data Augmentation Strategy:
