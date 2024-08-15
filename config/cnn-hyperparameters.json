@@ -7,7 +7,7 @@
     "hidden_one": 128,
     "n_slope": 0.01,
     "augment": true,
-    "prob_augment": 0.3,
+    "prop_augment": 0.3,
     "beta_one": 0.9,
     "beta_two": 0.999,
     "degrees": 15,
