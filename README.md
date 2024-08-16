@@ -43,7 +43,7 @@ Two different approaches were used for splitting the training data into normaliz
 Detailed explanations of the approaches can be found in both `model-reports/pytorch-model-reports.md` and `notes.pdf`.
 
 ## Summary of Results
-Details of the models and their methodologies provided in `model-reports.md`. However, for a quick summary, the test results for the PyTorch MLP, PyTorch CNN, and the MLP from scratch are 99.02%, 99.56%, and 97.47% respectively.
+Details of the models and their methodologies provided in **`model-reports/`**. However, for a quick summary, the test results for the PyTorch MLP, PyTorch CNN, and the MLP from scratch are 99.02%, 99.56%, and 97.47% respectively.
 
 ## Future Plans
 - Improve the MLP created from scratch by implementing a dynamic computation graph that optimizes operations before execution (similar to PyTorch) and enabling support for L-layer architecture
