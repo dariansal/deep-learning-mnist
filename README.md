@@ -4,10 +4,17 @@ This repository was created to gain an understanding of deep learning and its te
 - A more complex MLP and a Convolutional Neural Network (CNN) using PyTorch
 
 ## Reproducibility
-To reproduce the project:
-1. Ensure Python 3.10.14 is installed.
-2. Set up a virtual environment using Python 3.10.14.
-3. Run `pip install -r requirements.txt` to install the necessary packages.
+
+1. Install Python 3.10.14.
+2. Set up and activate a virtual environment:
+    ```zsh
+    python3.10 -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+3. Install dependencies:
+    ```zsh
+    pip install -r requirements.txt
+    ```
 
 ## Project Structure
 The project is organized as follows:
