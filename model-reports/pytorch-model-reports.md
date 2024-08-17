@@ -127,7 +127,7 @@ _Note: For final training, concatenate all normalized training examples from MNI
 </figure>
 
 
-- After choosing the hyperparameters and training the model with the full train dataset, the confusion matrix was analyzed with statistics including F1 score, precision, accuracy, and recall
+After final model training, the confusion matrix was analyzed with statistics including F1 score, precision, accuracy, and recall.
 
 <figure>
   <img src="visuals/original-distribution.png" alt="Original Distribution of Classes" width="75" height="200">
@@ -138,13 +138,13 @@ _Note: For final training, concatenate all normalized training examples from MNI
 <figure>
   <img src="visuals/altered-distribution.png" alt="Altered Distribution of Classes" width="75" height="200">
   <figcaption>Figure 5: Altered Augmented Dataset Distribution</figcaption>
-</figure>  
+</figure>    
 
-- The distribution of classes in MNIST dataset is originally uneven and the classes with more samples (e.g., 1) had a higher recall
-- To improve performance, in the augmented dataset, numbers that had a higher recall were replaced with numbers that had a lower recall 
-- This strategy increased the chance of chosen augmented elements being from a class that the model previously identified poorly
-    - Individually applied this strategy to each model (e.g., MLP augmented dataset was populated with more '7' samples than CNN augmented dataset)
-- After retraining with this strategy, both the CNN and MLP generalization improved
+-The distribution of classes in MNIST dataset is originally uneven and the classes with more samples (e.g., 1) had a higher recall  
+-To improve performance, in the augmented dataset, numbers that had a higher recall were replaced with numbers that had a lower recall   
+-This strategy increased the chance of chosen augmented elements being from a class that the model previously identified poorly  
+-Individually applied this strategy to each model (e.g., MLP augmented dataset was populated with more '7' samples than CNN augmented dataset)  
+-After retraining with this strategy, both the CNN and MLP generalization improved  
 
 ## Results and Discussion
 
@@ -166,9 +166,9 @@ _Note: For final training, concatenate all normalized training examples from MNI
   <figcaption>Figure 6: Custom handwritten digit</figcaption>
 </figure>
 
-- The MLP correctly classified the digit as '9' with 72.21% confidence
-- The CNN correctly classified the digit as '9' with 99.86% confidence
-    - This could be because the CNN, which has pattern recognition capabilities from its convolution layers, can handle out-of-distribution characteristics (e.g., pixel brightness, digit thickness) better than an MLP
+-The MLP correctly classified the digit as '9' with 72.21% confidence  
+-The CNN correctly classified the digit as '9' with 99.86% confidence  
+-Could be because the CNN, which has pattern recognition capabilities from its convolution layers, can handle out-of-distribution characteristics (e.g., pixel brightness, digit thickness) better than an MLP
 
 ### Key Takeaways
 
