@@ -1,5 +1,5 @@
 ## Purpose
-This repository was created to gain an understanding of deep learning and its techinques (e.g., training, data augmentation, k-folds cross validation, statistics for model analysis, etc.) by implementing the following:
+This repository was created to gain an understanding of deep learning and its techinques (e.g., training, data augmentation, k-fold cross validation, statistics for model analysis, etc.) by implementing the following:
 - A multilayer perceptron (MLP) and its corresponding algorithms from scratch
 - A more complex MLP and a Convolutional Neural Network (CNN) using PyTorch
 
