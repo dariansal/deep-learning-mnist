@@ -8,10 +8,9 @@
    - [Design Choices](#design-choices)
 3. [Data Augmentation Strategy](#data-augmentation-strategy)
     - [The Two Approaches](#the-two-approaches)
-    - [Additional Considerations](#additional-considerations)
-3. [Evaluation and Hyperparameter Tuning](#evaluation-and-hyperparameter-tuning)
-4. [Training Process](#training-process)
-5. [Results and Discussion](#results-and-discussion)
+4. [Evaluation and Hyperparameter Tuning](#evaluation-and-hyperparameter-tuning)
+5. [Training Process](#training-process)
+6. [Results and Discussion](#results-and-discussion)
    - [Model Performance](#model-performance)
    - [Analysis of Custom Handwritten Digits](#analysis-of-custom-handwritten-digits)
    - [Key Takeaways](#key-takeaways)
@@ -59,7 +58,6 @@ This document outlines the process and results for the Convolutional Neural Netw
 ## Hyperparameters
 
 Viewable in the `config/` directory.
-
 
 ### Design Choices
 
@@ -145,11 +143,24 @@ _Note: For final training, concatenate all normalized training examples from MNI
 </figure>
 
 
-- After choosing the hyperparameters and training the model with the full train dataset, the confusion matrix was analyzed with statistics including F1 score, precision, accuracy, and recall
-- To improve performance, in the augmented dataset, numbers that had a higher recall were replaced with numbers that had a lower recall 
-- This strategy increased the chance of chosen augmented elements being from a class that the model previously identified poorly
-    - Individually applied this strategy to each model (e.g., MLP augmented dataset was populated with more '7' samples than CNN augmented dataset)
-- After retraining with this strategy, both the CNN and MLP generalization improved
+- After final model training, the confusion matrix was analyzed with statistics including F1 score, precision, accuracy, and recall.
+
+<figure>
+  <img src="visuals/original-distribution.png" alt="Original Distribution of Classes" width="75" height="200">
+  <figcaption>Figure 4: Original Augmented Dataset Distribution</figcaption>
+</figure>
+
+
+<figure>
+  <img src="visuals/altered-distribution.png" alt="Altered Distribution of Classes" width="75" height="200">
+  <figcaption>Figure 5: Altered Augmented Dataset Distribution</figcaption>
+</figure>    
+
+- The distribution of classes in MNIST dataset is originally uneven and the classes with more samples (e.g., 1) had a higher recall  
+- To improve performance, in the augmented dataset, numbers that had a higher recall were replaced with numbers that had a lower recall   
+  - This strategy increased the chance of chosen augmented elements being from a class that the model previously identified poorly  
+- Individually applied this strategy to each model (e.g., MLP augmented dataset was populated with more '7' samples than CNN augmented dataset)  
+- After retraining with this strategy, both the CNN and MLP generalization improved  
 
 
 ## Results and Discussion
@@ -172,10 +183,9 @@ _Note: For final training, concatenate all normalized training examples from MNI
   <figcaption>Figure 6: Custom handwritten digit</figcaption>
 </figure>
 
-For a sample handwritten digit ''9'
-- The MLP correctly classified the digit with 72.21% confidence
-- The CNN correctly classified the digit with 99.86% confidence
-    - This could be because the CNN, which has pattern recognition capabilities from its convolution layers, can handle out-of-distribution characteristics (e.g., pixel brightness, digit thickness) better than an MLP
+- The MLP correctly classified the digit as '9' with 72.21% confidence  
+- The CNN correctly classified the digit as '9' with 99.86% confidence  
+- Could be because the CNN, which has pattern recognition capabilities from its convolution layers, can handle out-of-distribution characteristics (e.g., pixel brightness, digit thickness) better than an MLP
 
 ### Key Takeaways
 
@@ -184,7 +194,7 @@ For a sample handwritten digit ''9'
     - Both models demonstrate high accuracy on the MNIST test dataset
 
 2. Generalization to Out-of-Distribution Data:
-    - The MLP struggles significantly more than the CNN when dealing with the out-of-distribution `test-images` data (handwritten digits I drew)
+    - The MLP struggles significantly more than the CNN when dealing with the out-of-distribution `test-images` data
     - Suggests that the CNN has better generalization capabilities for real world data
 
 3. Data Augmentation Strategy:

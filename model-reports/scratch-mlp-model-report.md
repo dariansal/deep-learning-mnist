@@ -37,7 +37,7 @@ This document outlines the process and results for the multilayer perceptron (ML
 
 ### Design Choices
 
-- **Hyperparameter Tuning**: Implemented a custom grid search algorithm on an 80-20 train-validation split. The validation set was not chosen by first shuffling indices, as the MNIST dataset is pre-shuffled. The best model with the corresponding hyperparameters in **`config/`** achieved 97.12% validation accuracy.
+- **Hyperparameter Tuning**: Implemented a custom grid search algorithm for hyperparameter tuning, with each hyperparameter combination evaluated on the validation accuracy of an 80-20 train-validation split. The validation set was not chosen by first shuffling indices, as the MNIST dataset is pre-shuffled. The best model with the corresponding hyperparameters in **`config/`** achieved 97.12% validation accuracy.
 - **Loss Function**: Chose softmax categorical cross-entropy to penalize incorrect predictions more severely compared to alternative loss functions like mean squared error.
 - **Weight Initialization**: Implemented He initialization, which initializes weights to small values around 0, to prevent vanishing gradient (although this is not as common an issue for ReLU).
 - **ReLU Activation**: Selected for effectiveness in mitigating vanishing gradient problem compared to other activations like sigmoid. Leaky ReLU was also tested to address potential dying neurons issues caused by ReLU's derivative of 0 for negative inputs. However, standard ReLU activation performed better than Leaky ReLU.
@@ -55,14 +55,22 @@ This document outlines the process and results for the multilayer perceptron (ML
 - Implemented a custom grid search algorithm to explore the hyperparameters (e.g., hidden neurons, batch size)
 - Selected the model with the highest validation accuracy
 
+## Training Process
+
 <figure>
+<<<<<<< HEAD
   <img src="visuals/train-visual.png" alt="Train visual" width="800" height="250">
   <figcaption>Figure 1: Training the model with train/validations subsets.</figcaption>
 </figure>
 
  - During grid search, analyzed Figure 1 with different sets of hyperparameters to visualize how loss and train/validation accuracy were affected
+=======
+  <img src="visuals/train-visual.png" alt="Train visual" width="700" height="250">
+  <figcaption>Figure 1: Training the model with train/validations subsets</figcaption>
+</figure>
+>>>>>>> c2bdaf8 (Add usage rights.)
 
-## Training Process
+- While repeatedly being created during the training process, Figure 1 used to interpret how loss and train/validation accuracy were affected by different sets of hyperparameters.
 
 ### Training Procedure
 
@@ -88,8 +96,13 @@ This document outlines the process and results for the multilayer perceptron (ML
   <figcaption>Figure 2: Custom handwritten digit</figcaption>
 </figure>
 
+<<<<<<< HEAD
 - The model correctly classified this example as '8' with 79.76% confidence
 - Overall performance on custom digits was lower than the test set accuracy
+=======
+- The model correctly classified the digit as '8' with 79.76% confidence  
+- Overall performance on custom digits was lower than the test set accuracy  
+>>>>>>> c2bdaf8 (Add usage rights.)
 - Suspect this reduced performance was due to out-of-distribution characteristics (e.g., pixel brightness, digit thickness) compared to MNIST dataset
 
 ### Key Takeaways
