@@ -19,30 +19,30 @@ This repository was created to gain an understanding of deep learning and its te
 ## Project Structure
 The project is organized as follows:
 
-- **`config/`**: Contains the hyperparameters for each type of model
+- **`config/`**: Hyperparameters for each type of model
 
 - **`data/`**: 
-  - **`test_images/`**: Contains additional handwritten digits (drawn by myself) for model inference tests
-  - **`MNIST/`**: Contains the bytestream files of the MNIST dataset
+  - **`test_images/`**: Additional handwritten digits (drawn by myself) for model inference tests
+  - **`MNIST/`**: Bytestream files of the MNIST dataset
 
-- **`model-reports/`**: Contains reports of the methodologies and analysis of each of the models
-  - **`visuals/`** contains images that were present in the reports 
-  - `pytorch-model-reports.md` contains analysis of the CNN and MLP implemented in PyTorch
-  - `scratch-mlp-model-report.md` contains analysis of the MLP created from scratch
+- **`model-reports/`**: Reports of the methodologies and analysis of each of the models
+  - **`visuals/`**: Images used in the reports 
+  - `pytorch-model-reports.md`: Analysis of the CNN and MLP implemented in PyTorch
+  - `scratch-mlp-model-report.md`: Analysis of the MLP created from scratch
 
-- **`models/`**: Contains saved models with the following naming conventions (placeholders enclosed in {}):
+- **`models/`**: Saved models with the following naming conventions (placeholders enclosed in {}):
   - MLP from scratch: `mlp-scratch-{test_accuracy}.pkl`
   - PyTorch MLP: `mlp-{prop_aug}aug-{test_accuracy}.pkl`
   - PyTorch CNN: `cnn-{prop_aug}aug-{test_accuracy}.pkl`
 
 - **`src/`**: 
-  - `custom_dataset.py`: Contains the DataSetT class used for Approach 1 of splitting the train dataset into normalized/augmented proportions. Isolated class in a Python script due to multiprocessing issues with the DataLoader when using Jupyter notebooks. See "Data Augmentation Approaches" header below for more details.
+  - `custom_dataset.py`: DataSetT class used for Approach 1 of splitting the train dataset into normalized/augmented proportions. Isolated class in a Python script due to multiprocessing issues with the DataLoader when using Jupyter notebooks. See "Data Augmentation Approaches" header below for more details.
 
-- **`notebooks/`**: Contains the model development process for each model created.
-  - `mlp-model-selection.ipynb` and `cnn-model-selection.ipynb` include hyperparameter tuning, model training, and performance evaluation with model statistics using PyTorch
-  - `scratch-mlp-model-selection.ipynb`: Includes implementation of MLP and corresponding algorithms (e.g., Stochastic Gradient Descent) without deep learning libraries
+- **`notebooks/`**: Model development process
+  - `mlp-model-selection.ipynb` and `cnn-model-selection.ipynb`: Hyperparameter tuning, model training, performance evaluation with model statistics (PyTorch)
+  - `scratch-mlp-model-selection.ipynb`: Implementation of MLP and corresponding algorithms (e.g., Stochastic Gradient Descent) without deep learning libraries
 
-- `notes.pdf`: Handwritten notes created to better understand and complete the project. Listed below are the most important sections to guide understanding.
+- `notes.pdf`: Handwritten notes on project concepts. Listed below are the most important sections to guide understanding.
   - Table of Contents (page 1)
   - The two approaches to splitting training data into normalized/augmented data for the PyTorch models (pages 7-8):
   - Derivation of backpropagation equations for the MLP model implemented from scratch (pages 18-20)
