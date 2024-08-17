@@ -37,7 +37,7 @@ This document outlines the process and results for the multilayer perceptron (ML
 
 ### Design Choices
 
-- **Hyperparameter Tuning**: Implemented a custom grid search algorithm for hyperparameter tuning, with each hyperparameter combination evaluated on the validation accuracy of a 80-20 train-validation split. The validation set was not chosen by first shuffling indices, as the MNIST dataset is pre-shuffled. The best model with the corresponding hyperparameters in **`config/`** achieved 97.12% validation accuracy.
+- **Hyperparameter Tuning**: Implemented a custom grid search algorithm for hyperparameter tuning, with each hyperparameter combination evaluated on the validation accuracy of an 80-20 train-validation split. The validation set was not chosen by first shuffling indices, as the MNIST dataset is pre-shuffled. The best model with the corresponding hyperparameters in **`config/`** achieved 97.12% validation accuracy.
 - **Loss Function**: Chose softmax categorical cross-entropy to penalize incorrect predictions more severely compared to alternative loss functions like mean squared error.
 - **Weight Initialization**: Implemented He initialization, which initializes weights to small values around 0, to prevent vanishing gradient (although this is not as common an issue for ReLU).
 - **ReLU Activation**: Selected for effectiveness in mitigating vanishing gradient problem compared to other activations like sigmoid. Leaky ReLU was also tested to address potential dying neurons issues caused by ReLU's derivative of 0 for negative inputs. However, standard ReLU activation performed better than Leaky ReLU.
