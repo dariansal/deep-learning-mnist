@@ -62,7 +62,7 @@ This document outlines the process and results for the multilayer perceptron (ML
   <figcaption>Figure 1: Training the model with train/validations subsets</figcaption>
 </figure>
 
-While repeatedly being created during the training process, Figure 1 used to interpret how loss and train/validation accuracy were affected by different sets of hyperparameters.
+- While repeatedly being created during the training process, Figure 1 used to interpret how loss and train/validation accuracy were affected by different sets of hyperparameters.
 
 ### Training Procedure
 
@@ -88,9 +88,9 @@ While repeatedly being created during the training process, Figure 1 used to int
   <figcaption>Figure 2: Custom handwritten digit</figcaption>
 </figure>
 
- -The model correctly classified the digit as '8' with 79.76% confidence  
--Overall performance on custom digits was lower than the test set accuracy  
--Suspect this reduced performance was due to out-of-distribution characteristics (e.g., pixel brightness, digit thickness) compared to MNIST dataset
+- The model correctly classified the digit as '8' with 79.76% confidence  
+- Overall performance on custom digits was lower than the test set accuracy  
+- Suspect this reduced performance was due to out-of-distribution characteristics (e.g., pixel brightness, digit thickness) compared to MNIST dataset
 
 ### Key Takeaways
 
