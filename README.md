@@ -62,4 +62,5 @@ Details of the models and their methodologies provided in **`model-reports/`**. 
 - Improve the MLP created from scratch by implementing a dynamic computation graph that optimizes operations before execution (similar to PyTorch) and enabling support for L-layer architecture
 - Develop a Convolutional Neural Network (CNN) from scratch
 
-
+## Usage Rights
+This repository is publicly visible for academic purposes only. Any unauthorized use, reproduction, or distribution requires explicit permission from the repository owner.
